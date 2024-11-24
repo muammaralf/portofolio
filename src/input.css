@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans";
+}
+
+.navbar-fixed {
+  @apply fixed bg-darkbg bg-opacity-100 border-b border-primary border-opacity-100 z-[999];
+  backdrop-filter: blur(3px);
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] block my-2 bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.nav-menu-active {
+  @apply bg-opacity-100 border-opacity-100 text-opacity-100 scale-100;
+}
